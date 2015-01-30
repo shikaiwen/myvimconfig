@@ -1,6 +1,6 @@
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype off                " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -13,6 +13,16 @@ Plugin 'gmarik/Vundle.vim'
 
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim' 
+Plugin 'scrooloose/nerdcommenter'
+
+Plugin 'jiangmiao/auto-pairs'
+
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'vim-scripts/OmniCppComplete' 
+Plugin 'vim-scripts/taglist.vim'
+
+" The following are examples of different formats supported.
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -45,7 +55,37 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-
+filetype plugin on 
 
 
 set number
+:let mapleader=","
+
+"basic setting
+set tabstop=4
+
+
+" NERDTree configuration
+" nerdtree设置
+" " 控制当光标移动超过一定距离时，是否自动将焦点调整到屏中心
+ let NERDTreeAutoCenter=1
+" " 指定鼠标模式（1.双击打开；2.单目录双文件；3.单击打开）
+" " let NERDTreeMouseMode=2
+" " 是否默认显示书签列表
+" " let NERDTreeShowBookmarks=1
+" " 是否默认显示文件
+ let NERDTreeShowFiles=1
+" " 是否默认显示隐藏文件
+" " let NERDTreeShowHidden=1
+" " 是否默认显示行号
+ let NERDTreeShowLineNumbers=1
+" " 窗口位置（'left' or 'right'）
+" " let NERDTreeWinPos='left'
+" " 窗口宽
+ let NERDTreeWinSize=31
+
+ " ctags setting
+ set tags+=~/.vim/systags
+ " the command to compile sys header file into tags file 
+ " ctags --fields=+iaS --extra=+q -R -f ~/.vim/systags /usr/include  /usr/local/include
+ " reference blog : http://blog.csdn.net/zklth/article/details/7027798
