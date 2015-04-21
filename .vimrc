@@ -64,7 +64,10 @@ set number
 "basic setting
 set tabstop=4
 
+:imap <C-s> <Esc>:w<CR>a
 
+":map - x
+":imap <C123 
 " NERDTree configuration
 " nerdtree设置
 " " 控制当光标移动超过一定距离时，是否自动将焦点调整到屏中心
@@ -85,7 +88,10 @@ set tabstop=4
  let NERDTreeWinSize=31
 
  " ctags setting
- set tags+=~/.vim/systags
+ set tags+=~/.vim/tagdir/systags
+ set tags+=~/.vim/tagdir/aprtags
  " the command to compile sys header file into tags file 
  " ctags --fields=+iaS --extra=+q -R -f ~/.vim/systags /usr/include  /usr/local/include
  " reference blog : http://blog.csdn.net/zklth/article/details/7027798
+ "
+ "
