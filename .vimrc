@@ -62,10 +62,21 @@ set number
 :let mapleader=","
 
 "basic setting
-set tabstop=4
+set tabstop=2
+set shiftwidth=2    " thaks man , http://yyq123.blogspot.com/2010/10/vim-indent.html , http://www.cnblogs.com/chenwenbiao/archive/2011/08/07/2129819.html
 
-:imap <C-s> <Esc>:w<CR>a
+:imap <C-s> <Esc>:w<CR>
+:nmap <C-s> <Esc>:w<CR>
+:imap <C-d> <Esc>dd
+:nmap <C-d> <Esc>dd
+:imap <C-v> <Esc>kpa 
+:nmap <C-v> <Esc>kp 
 
+:imap <A-Up> <Esc>ddkkpa
+:nmap <A-Up> <Esc>ddkkpk 
+
+:imap <A-Down> <Esc>ddpja
+:nmap <A-Down> <Esc>ddp
 ":map - x
 ":imap <C123 
 " NERDTree configuration
