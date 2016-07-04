@@ -13,3 +13,9 @@ git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle.vim
 <br><br>
 4、下载插件: 打开vim ，执行:BundleInstall
 <br><br>
+
+<br>
+<h3>my common bash script already included in this project</h3>
+.bashrc
+
+
